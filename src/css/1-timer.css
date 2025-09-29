@@ -1,0 +1,102 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #d3d3d3;
+  height: 100vh;
+  margin: 0;
+  padding-top: 80px;
+}
+
+/*Поле вибору дати*/
+#datetime-picker {
+  width: 260px;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1px solid #cfcfcf;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s ease;
+  color: #333;
+}
+
+#datetime-picker:hover {
+  border-color: #8a8a8a;
+}
+
+#datetime-picker:focus {
+  border-color: #4a90e2;
+}
+
+/*Кнопка Start*/
+button {
+  padding: 10px 22px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: #4a90e2;
+  color: #fff;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover:enabled {
+  background-color: #357ab8;
+}
+
+button:active:enabled {
+  transform: scale(0.97);
+}
+
+button[disabled] {
+  background-color: #cfcfcf;
+  color: #7a7a7a;
+  cursor: not-allowed;
+}
+
+/*Контейнер таймера*/
+.timer {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+  margin-top: 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*Поля таймера*/
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value {
+  font-size: 42px;
+  font-weight: 600;
+  color: #222;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6e6e6e;
+  margin-top: 8px;
+  letter-spacing: 0.05em;
+}
+
+/*Стан, коли дата не вибрана*/
+.date-unchoosed .timer {
+  opacity: 0.6;
+}
+
+/*iziToast*/
+.iziToast {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
